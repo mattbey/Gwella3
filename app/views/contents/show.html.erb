@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h3>Content #<%= @content.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Source</dt>
+      <dd><%= @content.source %></dd>
+
+      <dt>Title</dt>
+      <dd><%= @content.Title %></dd>
+
+      <dt>Description</dt>
+      <dd><%= @content.Description %></dd>
+
+      <dt>Link</dt>
+      <dd><%= @content.Link %></dd>
+
+      <dt>Rating</dt>
+      <dd><%= @content.Rating %></dd>
+
+      <dt>Userid</dt>
+      <dd><%= @content.UserId %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/contents" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/contents/<%= @content.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_content/<%= @content.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,153 @@
+<!-- Validation failure messages -->
+<% if @video.errors.any? %>
+  <% @video.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Video #<%= @video.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_video/<%= @video.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for source -->
+      <div class="form-group">
+        <label for="source" class="control-label">
+          Source
+        </label>
+
+        <input type="text" id="source" name="source" placeholder="Source" class="form-control" value="<%= @video.source %>">
+      </div>
+
+      <!-- Label and input for Name -->
+      <div class="form-group">
+        <label for="Name" class="control-label">
+          Name
+        </label>
+
+        <textarea id="Name" name="Name" placeholder="Name" class="form-control" rows="3"><%= @video.Name %></textarea>
+      </div>
+
+      <!-- Label and input for Tag1 -->
+      <div class="form-group">
+        <label for="Tag1" class="control-label">
+          Tag1
+        </label>
+
+        <textarea id="Tag1" name="Tag1" placeholder="Tag1" class="form-control" rows="3"><%= @video.Tag1 %></textarea>
+      </div>
+
+      <!-- Label and input for Tag2 -->
+      <div class="form-group">
+        <label for="Tag2" class="control-label">
+          Tag2
+        </label>
+
+        <textarea id="Tag2" name="Tag2" placeholder="Tag2" class="form-control" rows="3"><%= @video.Tag2 %></textarea>
+      </div>
+
+      <!-- Label and input for Tag3 -->
+      <div class="form-group">
+        <label for="Tag3" class="control-label">
+          Tag3
+        </label>
+
+        <textarea id="Tag3" name="Tag3" placeholder="Tag3" class="form-control" rows="3"><%= @video.Tag3 %></textarea>
+      </div>
+
+      <!-- Label and input for Tag4 -->
+      <div class="form-group">
+        <label for="Tag4" class="control-label">
+          Tag4
+        </label>
+
+        <textarea id="Tag4" name="Tag4" placeholder="Tag4" class="form-control" rows="3"><%= @video.Tag4 %></textarea>
+      </div>
+
+      <!-- Label and input for Tag5 -->
+      <div class="form-group">
+        <label for="Tag5" class="control-label">
+          Tag5
+        </label>
+
+        <textarea id="Tag5" name="Tag5" placeholder="Tag5" class="form-control" rows="3"><%= @video.Tag5 %></textarea>
+      </div>
+
+      <!-- Label and input for Anonymity -->
+      <div class="checkbox">
+        <label for="Anonymity">
+          <input type="checkbox" id="Anonymity" name="Anonymity" value="1" <%= "checked" if @video.Anonymity %>>
+          Anonymity
+        </label>
+      </div>
+
+      <!-- Label and input for Timer -->
+      <div class="form-group">
+        <label for="Timer" class="control-label">
+          Timer
+        </label>
+
+        <input type="text" id="Timer" name="Timer" placeholder="Timer" class="form-control" value="<%= @video.Timer %>">
+      </div>
+
+      <!-- Label and input for VideoLength -->
+      <div class="form-group">
+        <label for="VideoLength" class="control-label">
+          Videolength
+        </label>
+
+        <input type="text" id="VideoLength" name="VideoLength" placeholder="Videolength" class="form-control" value="<%= @video.VideoLength %>">
+      </div>
+
+      <!-- Label and input for TotalViews -->
+      <div class="form-group">
+        <label for="TotalViews" class="control-label">
+          Totalviews
+        </label>
+
+        <input type="text" id="TotalViews" name="TotalViews" placeholder="Totalviews" class="form-control" value="<%= @video.TotalViews %>">
+      </div>
+
+      <!-- Label and input for Rating -->
+      <div class="form-group">
+        <label for="Rating" class="control-label">
+          Rating
+        </label>
+
+        <input type="text" id="Rating" name="Rating" placeholder="Rating" class="form-control" value="<%= @video.Rating %>">
+      </div>
+
+      <!-- Label and input for UserId -->
+      <div class="form-group">
+        <label for="UserId" class="control-label">
+          Userid
+        </label>
+
+        <input type="text" id="UserId" name="UserId" placeholder="Userid" class="form-control" value="<%= @video.UserId %>">
+      </div>
+
+      <!-- Label and input for VideoId -->
+      <div class="form-group">
+        <label for="VideoId" class="control-label">
+          Videoid
+        </label>
+
+        <input type="text" id="VideoId" name="VideoId" placeholder="Videoid" class="form-control" value="<%= @video.VideoId %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Video
+      </button>
+      or
+      <a href="/videos/<%= @video.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

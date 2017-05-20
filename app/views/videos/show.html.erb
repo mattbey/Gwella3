@@ -1,0 +1,64 @@
+<div class="page-header">
+  <h3>Video #<%= @video.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Source</dt>
+      <dd><%= @video.source %></dd>
+
+      <dt>Name</dt>
+      <dd><%= @video.Name %></dd>
+
+      <dt>Tag1</dt>
+      <dd><%= @video.Tag1 %></dd>
+
+      <dt>Tag2</dt>
+      <dd><%= @video.Tag2 %></dd>
+
+      <dt>Tag3</dt>
+      <dd><%= @video.Tag3 %></dd>
+
+      <dt>Tag4</dt>
+      <dd><%= @video.Tag4 %></dd>
+
+      <dt>Tag5</dt>
+      <dd><%= @video.Tag5 %></dd>
+
+      <dt>Anonymity</dt>
+      <dd><%= @video.Anonymity %></dd>
+
+      <dt>Timer</dt>
+      <dd><%= @video.Timer %></dd>
+
+      <dt>Videolength</dt>
+      <dd><%= @video.VideoLength %></dd>
+
+      <dt>Totalviews</dt>
+      <dd><%= @video.TotalViews %></dd>
+
+      <dt>Rating</dt>
+      <dd><%= @video.Rating %></dd>
+
+      <dt>Userid</dt>
+      <dd><%= @video.UserId %></dd>
+
+      <dt>Videoid</dt>
+      <dd><%= @video.VideoId %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/videos" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/videos/<%= @video.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_video/<%= @video.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
