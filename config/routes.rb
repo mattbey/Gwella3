@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
-  # Routes for the Content resource:
+
+  # Routes for the Profile resource:
   # CREATE
-  get "/contents/new", :controller => "contents", :action => "new"
-  post "/create_content", :controller => "contents", :action => "create"
+  get "/profiles/new", :controller => "profiles", :action => "new"
+  post "/create_profile", :controller => "profiles", :action => "create"
 
   # READ
-  get "/contents", :controller => "contents", :action => "index"
-  get "/contents/:id", :controller => "contents", :action => "show"
+  get "/profiles", :controller => "profiles", :action => "index"
+  get "/profiles/:id", :controller => "profiles", :action => "show"
 
   # UPDATE
-  get "/contents/:id/edit", :controller => "contents", :action => "edit"
-  post "/update_content/:id", :controller => "contents", :action => "update"
+  get "/profiles/:id/edit", :controller => "profiles", :action => "edit"
+  post "/update_profile/:id", :controller => "profiles", :action => "update"
 
   # DELETE
-  get "/delete_content/:id", :controller => "contents", :action => "destroy"
+  get "/delete_profile/:id", :controller => "profiles", :action => "destroy"
+  #------------------------------
+
   #------------------------------
 
   # Routes for the Video resource:
@@ -34,7 +37,7 @@ Rails.application.routes.draw do
   #------------------------------
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
+
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
       get("/login", {:controller => "loginscreen", :action => "index"})
       get("/", {:controller => "loginscreen", :action => "index"})

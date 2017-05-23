@@ -1,6 +1,6 @@
 <!-- Validation failure messages -->
-<% if @content.errors.any? %>
-  <% @content.errors.full_messages.each do |message| %>
+<% if @profile.errors.any? %>
+  <% @profile.errors.full_messages.each do |message| %>
     <div class="alert alert-dismissable alert-danger">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <%= message %>
@@ -9,12 +9,12 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Add Content</h3>
+  <h3>Add Profile</h3>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/create_content" method="post">
+    <form action="/create_profile" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -24,7 +24,7 @@
           Source
         </label>
 
-        <input type="text" id="source" name="source" placeholder="Source" class="form-control" value="<%= @content.source %>">
+        <input type="text" id="source" name="source" placeholder="Source" class="form-control" value="<%= @profile.source %>">
       </div>
 
       <!-- Label and input for Title -->
@@ -33,7 +33,7 @@
           Title
         </label>
 
-        <textarea id="Title" name="Title" placeholder="Title" class="form-control" rows="3"><%= @content.Title %></textarea>
+        <textarea id="Title" name="Title" placeholder="Title" class="form-control" rows="3"><%= @profile.Title %></textarea>
       </div>
 
       <!-- Label and input for Description -->
@@ -42,7 +42,7 @@
           Description
         </label>
 
-        <textarea id="Description" name="Description" placeholder="Description" class="form-control" rows="3"><%= @content.Description %></textarea>
+        <textarea id="Description" name="Description" placeholder="Description" class="form-control" rows="3"><%= @profile.Description %></textarea>
       </div>
 
       <!-- Label and input for Link -->
@@ -51,7 +51,7 @@
           Link
         </label>
 
-        <input type="text" id="Link" name="Link" placeholder="Link" class="form-control" value="<%= @content.Link %>">
+        <input type="text" id="Link" name="Link" placeholder="Link" class="form-control" value="<%= @profile.Link %>">
       </div>
 
       <!-- Label and input for Rating -->
@@ -60,7 +60,7 @@
           Rating
         </label>
 
-        <input type="text" id="Rating" name="Rating" placeholder="Rating" class="form-control" value="<%= @content.Rating %>">
+        <input type="text" id="Rating" name="Rating" placeholder="Rating" class="form-control" value="<%= @profile.Rating %>">
       </div>
 
       <!-- Label and input for UserId -->
@@ -69,14 +69,14 @@
           Userid
         </label>
 
-        <input type="text" id="UserId" name="UserId" placeholder="Userid" class="form-control" value="<%= @content.UserId %>">
+        <input type="text" id="UserId" name="UserId" placeholder="Userid" class="form-control" value="<%= @profile.UserId %>">
       </div>
 
       <button class="btn btn-success">
-        Create Content
+        Create Profile
       </button>
       or
-      <a href="/contents">Cancel</a>
+      <a href="/profiles">Cancel</a>
     </form>
   </div>
 </div>
