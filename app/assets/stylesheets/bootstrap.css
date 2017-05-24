@@ -1086,7 +1086,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #e9ebee;
 }
 input,
 button,
@@ -3071,7 +3071,7 @@ fieldset[disabled] a.btn {
   border-color: #8c8c8c;
 }
 .btn-default:hover {
-  color: #333;
+  color: #;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -3109,8 +3109,8 @@ fieldset[disabled] .btn-default:focus,
 .btn-default.disabled.focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
-  background-color: #fff;
-  border-color: #ccc;
+  background-color: #00ffc8;
+  border-color: #00ffc8;
 }
 .btn-default .badge {
   color: #fff;
